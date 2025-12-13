@@ -5,6 +5,22 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Hide scrollbar chrome/safari/opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @keyframes float {
@@ -21,4 +37,19 @@ html {
   position: absolute;
   animation: float ease-in-out infinite;
   opacity: 1;
+}
+
+.cloud-floating-upDown {
+  animation: floatingCloud 3s ease-in-out infinite;
+}
+
+/* Animasi floating untuk awan di about section */
+@keyframes floatingCloud {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
