@@ -53,3 +53,69 @@ section {
     transform: translateY(-10px);
   }
 }
+
+/* Animasi Marquee */
+.cloud-track {
+  display: flex;
+  width: max-content;
+  animation: cloud-marquee-left 50s linear infinite;
+  will-change: transform;
+}
+
+.cloud-track.reverse {
+  animation: cloud-marquee-right 50s linear infinite;
+}
+
+.cloud-group {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  gap: 70px;
+  padding-inline: 120px;
+  box-sizing: border-box;
+}
+
+.cloud {
+  height: 100px;
+  width: 120px;
+  object-fit: contain;
+  flex-shrink: 0;
+  opacity: 0.9;
+  filter: blur(0.3px);
+  pointer-events: none;
+}
+
+/* Marquee Kiri */
+@keyframes cloud-marquee-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Marquee kanan */
+@keyframes cloud-marquee-right {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.1;
+  }
+}
+.animate-breathe {
+  animation: breathe 5s ease-in-out infinite;
+}
