@@ -17,12 +17,6 @@ html::-webkit-scrollbar {
   display: none;
 }
 
-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
 @keyframes float {
   0%,
   100% {
