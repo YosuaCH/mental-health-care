@@ -23,4 +23,6 @@ const load = async (id, file) => {
   await load("service-section", "fragments/services.html");
 
   await load("invitation", "fragments/invitation.html");
+
+  await load("footer", "fragments/footer.html");
 })();
