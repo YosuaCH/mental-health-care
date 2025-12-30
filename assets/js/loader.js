@@ -19,4 +19,6 @@ const load = async (id, file) => {
 
   await load("shape-section", "fragments/shape_section.html");
   if (typeof initShapeSection === "function") initShapeSection();
+
+  await load("service-section", "fragments/services.html");
 })();
