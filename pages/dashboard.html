@@ -31,27 +31,88 @@
 
   <body class="bg-[#f8f8f8] font-[Poppins]">
     <nav
-      class="fixed top-6 left-1/2 -translate-x-1/2 bg-white/70 backdrop-blur-[2px] shadow-lg rounded-2xl z-50 px-5 py-2 w-[460px]"
+      class="fixed top-6 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md shadow-xl rounded-full z-50 px-4 py-2 w-auto min-w-[420px] max-w-2xl border border-white/40 flex justify-between items-center gap-4"
     >
-      <div class="flex items-center gap-6">
-        <a href="../index.html" class="flex-shrink-0">
+      <a
+        href="#"
+        onclick="location.reload()"
+        class="flex-shrink-0 group pl-2"
+        title="Refresh Dashboard"
+      >
+        <img
+          src="../assets/image/logo_brand-removebg-preview.png"
+          class="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+        />
+      </a>
+
+      <div
+        class="hidden sm:block text-sm font-medium text-slate-500 font-[Poppins]"
+      >
+        Mental Health Care
+      </div>
+
+      <div class="relative" x-data="{ open: false }">
+        <button
+          onclick="toggleProfileMenu()"
+          class="flex items-center gap-3 bg-white pl-1 pr-4 py-1 rounded-full border border-slate-200 shadow-sm hover:shadow-md transition-all group focus:outline-none"
+        >
           <img
-            src="../assets/image/logo_brand-removebg-preview.png"
-            class="w-10 h-10 object-contain"
+            id="user-avatar"
+            src=""
+            class="w-8 h-8 rounded-full ring-2 ring-white ml-2 object-cover flex-shrink-0"
           />
-        </a>
-        <div class="flex-1"></div>
-        <div class="flex items-center gap-6">
-          <a
-            href="#"
-            class="relative text-black font-medium after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-[#f2ca4b] after:transition-all after:duration-300 hover:after:w-full"
-            >Beranda</a
+          <span
+            id="user-name"
+            class="text-sm font-bold text-slate-700 group-hover:text-black hidden sm:block"
+          ></span>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 text-slate-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
           >
-          <a
-            href="../index.html"
-            class="relative text-black font-medium after:content-[''] after:absolute after:left-1/2 after:-translate-x-1/2 after:bottom-[-2px] after:h-[2px] after:w-0 after:bg-[#f2ca4b] after:transition-all after:duration-300 hover:after:w-full"
-            >Keluar</a
-          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </button>
+
+        <div
+          id="profile-dropdown"
+          class="hidden absolute top-14 right-0 w-56 bg-white rounded-2xl shadow-2xl border border-slate-100 overflow-hidden z-50 transform origin-top-right animate-in fade-in slide-in-from-top-2 duration-200"
+        >
+          <div class="px-5 py-4 border-b border-slate-100 bg-slate-50/50">
+            <p
+              id="user-name-dropdown"
+              class="text-sm font-bold text-slate-900 truncate"
+            >
+              User
+            </p>
+            <p class="text-xs text-slate-400 truncate">user@example.com</p>
+          </div>
+
+          <div class="p-2">
+            <a
+              href="pages/profile.html"
+              class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-slate-600 rounded-lg hover:bg-slate-50 hover:text-slate-900 transition-colors"
+            >
+              Edit Profil
+            </a>
+          </div>
+
+          <div class="p-2 border-t border-slate-100">
+            <a
+              href="../index.html"
+              class="flex items-center gap-3 px-3 py-2 text-sm font-medium text-red-600 rounded-lg hover:bg-red-50 transition-colors"
+            >
+              Keluar
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -299,6 +360,45 @@
         AOS.init({ once: true });
         initCloudBgSection();
         generateDailyQuote();
+        initUserProfile();
+      });
+
+      function initUserProfile() {
+        const userData = {
+          name: "Username",
+          email: "username@example.com",
+        };
+
+        // update text dengan data
+        const name = document.getElementById("user-name");
+        if (name) name.innerText = userData.name;
+        const nameText = document.getElementById("user-name-text");
+        if (nameText) nameText.innerText = userData.name;
+        const dropdownName = document.getElementById("user-name-dropdown");
+        if (dropdownName) dropdownName.innerText = userData.name;
+
+        // gambar random
+        const avatarImg = document.getElementById("user-avatar");
+        if (avatarImg) {
+          avatarImg.src = `https://api.dicebear.com/9.x/avataaars/svg?seed=${Math.random()}`;
+        }
+      }
+
+      function toggleProfileMenu() {
+        const dropdown = document.getElementById("profile-dropdown");
+        if (dropdown) {
+          dropdown.classList.toggle("hidden");
+        }
+      }
+
+      // buat tutup menu kalau klik di luar area
+      document.addEventListener("click", function (event) {
+        const dropdown = document.getElementById("profile-dropdown");
+        const button = event.target.closest("button");
+
+        if (dropdown && !dropdown.classList.contains("hidden") && !button) {
+          dropdown.classList.add("hidden");
+        }
       });
     </script>
   </body>
