@@ -1,29 +1,32 @@
-function initHeroSection() {
+function initCloudBgSection() {
+  const isInsidePages = window.location.pathname.includes("/pages/");
+  const basePath = isInsidePages ? "../" : "";
   const cloudImages = [
-    "assets/image/cloud (1).png",
-    "assets/image/cloud (2).png",
-    "assets/image/cloud (3).png",
-    "assets/image/cloud (4).png",
-    "assets/image/cloud (5).png",
-    "assets/image/cloud (6).png",
-    "assets/image/cloud (7).png",
-    "assets/image/cloud (8).png",
-    "assets/image/cloud (9).png",
-    "assets/image/cloud (10).png",
-    "assets/image/cloud (11).png",
-    "assets/image/cloud (12).png",
-    "assets/image/cloud (13).png",
-    "assets/image/cloud (14).png",
-    "assets/image/cloud (15).png",
-    "assets/image/cloud (16).png",
-    "assets/image/cloud.png",
+    basePath + "assets/image/cloud (1).png",
+    basePath + "assets/image/cloud (2).png",
+    basePath + "assets/image/cloud (3).png",
+    basePath + "assets/image/cloud (4).png",
+    basePath + "assets/image/cloud (5).png",
+    basePath + "assets/image/cloud (6).png",
+    basePath + "assets/image/cloud (7).png",
+    basePath + "assets/image/cloud (8).png",
+    basePath + "assets/image/cloud (9).png",
+    basePath + "assets/image/cloud (10).png",
+    basePath + "assets/image/cloud (11).png",
+    basePath + "assets/image/cloud (12).png",
+    basePath + "assets/image/cloud (13).png",
+    basePath + "assets/image/cloud (14).png",
+    basePath + "assets/image/cloud (15).png",
+    basePath + "assets/image/cloud (16).png",
+    basePath + "assets/image/cloud.png",
   ];
 
   const container = document.getElementById("clouds-container");
   if (!container) {
-    console.warn("clouds-container belum ada");
+    console.warn("Element #clouds-container tidak ditemukan di halaman ini.");
     return;
   }
+  container.innerHTML = "";
 
   const numClouds = 10;
   const clouds = [];
@@ -63,9 +66,12 @@ function initHeroSection() {
 
   for (let i = 0; i < numClouds; i++) {
     const cloud = document.createElement("img");
+
     cloud.className = "cloud-float";
+
     cloud.src = shuffledImages[i % shuffledImages.length];
     cloud.alt = "cloud";
+    cloud.style.position = "absolute";
 
     const size = Math.floor(Math.random() * 50) + 60;
     cloud.style.width = size + "px";
@@ -76,6 +82,7 @@ function initHeroSection() {
 
     cloud.style.animationDuration = Math.random() * 10 + 6 + "s";
     cloud.style.animationDelay = Math.random() * 5 + "s";
+    cloud.style.zIndex = "1";
 
     clouds.push({ x, y, size });
     container.appendChild(cloud);

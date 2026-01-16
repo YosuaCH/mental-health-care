@@ -12,7 +12,7 @@ const load = async (id, file) => {
   if (typeof initNavbar === "function") initNavbar();
 
   await load("hero-section", "fragments/hero.html");
-  if (typeof initHeroSection === "function") initHeroSection();
+  if (typeof initCloudBgSection === "function") initCloudBgSection();
 
   await load("about-section", "fragments/about.html");
 
