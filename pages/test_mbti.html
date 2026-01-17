@@ -12,6 +12,8 @@
     />
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- Google Fonts: Poppins -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
@@ -21,49 +23,96 @@
     <!-- GSAP Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-    <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
 
   <body class="overflow-x-hidden bg-[#f8f8f8] font-[Poppins]">
-    <div id="stack-container" class="relative h-screen overflow-hidden">
-      <div class="w-full flex flex-col items-center bg-slate-900 p-4">
-        <h1 class="text-white text-2xl md:text-4xl font-bold text-center">
-          Total Pertanyaan ada n
+    <section
+      id="start"
+      class="relative min-h-screen flex flex-col justify-start overflow-hidden px-4 md:px-8 lg:px-0"
+    >
+      <!-- Header -->
+      <div
+        class="flex flex-col items-center self-center p-4 md:p-8 w-fit gap-2 md:gap-4"
+      >
+        <h1
+          class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 text-center"
+        >
+          Mari Test Kepribadian kamu
         </h1>
-        <p class="text-white text-sm md:text-lg text-center mt-4">
-          Waktu pengerjaan sekitar 5-10 menit. Jawab dengan jujur ya!
+        <p class="text-base md:text-xl lg:text-2xl text-slate-900 text-center">
+          Created by Mental Health Care
         </p>
       </div>
 
+      <!-- Subheader -->
       <div
-        class="card-stack w-[350px] h-[500px] md:w-[1200px] md:h-[550px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        class="items-center self-center pt-4 md:pt-8 flex flex-col gap-2 md:gap-4 px-4"
       >
-        <h1 class="text-white text-center">Pertanyaan 1</h1>
+        <h1
+          class="text-xl md:text-2xl lg:text-3xl text-slate-900 font-semibold text-center"
+        >
+          STOP mari baca dulu!
+        </h1>
+        <p class="text-sm md:text-lg lg:text-xl text-slate-500 text-center">
+          Jangan Terburu buru waktu mengisi ingatlah 3 hal ini ya
+        </p>
       </div>
 
+      <!-- Cards Container -->
       <div
-        class="card-stack w-[350px] h-[500px] md:w-[1200px] md:h-[550px] bg-[#693668] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        class="flex flex-1 flex-col md:flex-row mx-4 md:mx-12 lg:mx-[200px] my-8 md:my-12 gap-4 md:gap-6"
       >
-        <h1 class="text-white text-center">Pertanyaan 2</h1>
+        <div
+          class="w-full h-40 md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6"
+        ></div>
+        <div
+          class="w-full h-40 md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6"
+        ></div>
+        <div
+          class="w-full h-40 md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6"
+        ></div>
       </div>
+    </section>
+    <section id="test_mbti">
+      <div id="stack-container" class="relative h-screen overflow-hidden">
+        <div class="w-full flex flex-col items-center bg-slate-900 p-4">
+          <h1 class="text-white text-2xl md:text-4xl font-bold text-center">
+            Total Pertanyaan ada n
+          </h1>
+          <p class="text-white text-sm md:text-lg text-center mt-4">
+            Waktu pengerjaan sekitar 5-10 menit. Jawab dengan jujur ya!
+          </p>
+        </div>
 
-      <div
-        class="card-stack w-[350px] h-[500px] md:w-[1200px] md:h-[550px] bg-[#a74482] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-      >
-        <h1 class="text-white text-center">Pertanyaan 3</h1>
+        <div
+          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        >
+          <h1 class="text-white text-center">Pertanyaan 1</h1>
+        </div>
+
+        <div
+          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#693668] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        >
+          <h1 class="text-white text-center">Pertanyaan 2</h1>
+        </div>
+
+        <div
+          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#a74482] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        >
+          <h1 class="text-white text-center">Pertanyaan 3</h1>
+        </div>
+        <div
+          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#f84aa7] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        >
+          <h1 class="text-white text-center">Pertanyaan 4</h1>
+        </div>
+        <div
+          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+        >
+          <h1 class="text-white text-center">Pertanyaan 5</h1>
+        </div>
       </div>
-      <div
-        class="card-stack w-[350px] h-[500px] md:w-[1200px] md:h-[550px] bg-[#f84aa7] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-      >
-        <h1 class="text-white text-center">Pertanyaan 4</h1>
-      </div>
-      <div
-        class="card-stack w-[350px] h-[500px] md:w-[1200px] md:h-[550px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-      >
-        <h1 class="text-white text-center">Pertanyaan 5</h1>
-      </div>
-    </div>
+    </section>
 
     <script>
       gsap.registerPlugin(ScrollTrigger);

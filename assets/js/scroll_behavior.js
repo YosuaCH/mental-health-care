@@ -88,5 +88,7 @@ window.addEventListener(
       }, 100);
     }
   },
-  { passive: false }
+  { passive: false },
 );
+
+// Disable default scroll behavior
