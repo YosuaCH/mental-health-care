@@ -117,7 +117,7 @@ html::-webkit-scrollbar {
 /* Card Stack */
 .card-stack {
   position: absolute;
-  top: 58%;
+  top: 59%;
   left: 50%;
   transform: translate(-50%, -50%);
 }

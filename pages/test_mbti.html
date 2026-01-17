@@ -23,6 +23,10 @@
     <!-- GSAP Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- AOS CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
   <body class="overflow-x-hidden bg-[#f8f8f8] font-[Poppins]">
@@ -37,40 +41,83 @@
         <h1
           class="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-900 text-center"
         >
-          Mari Test Kepribadian kamu
+          Mari Kenali Dirimu Lebih Dalam
         </h1>
         <p class="text-base md:text-xl lg:text-2xl text-slate-900 text-center">
-          Created by Mental Health Care
+          by Mental Health Care
         </p>
       </div>
 
       <!-- Subheader -->
       <div
-        class="items-center self-center pt-4 md:pt-8 flex flex-col gap-2 md:gap-4 px-4"
+        class="items-center self-center pt-2 md:pt-2 flex flex-col gap-2 md:gap-2 px-4"
       >
         <h1
           class="text-xl md:text-2xl lg:text-3xl text-slate-900 font-semibold text-center"
         >
-          STOP mari baca dulu!
+          Eits, tunggu sebentar ya!
         </h1>
         <p class="text-sm md:text-lg lg:text-xl text-slate-500 text-center">
-          Jangan Terburu buru waktu mengisi ingatlah 3 hal ini ya
+          Nggak perlu buru-buru, kok. Biar hasilnya maksimal, simak 3 tips ini
+          dulu.
         </p>
       </div>
 
       <!-- Cards Container -->
       <div
-        class="flex flex-1 flex-col md:flex-row mx-4 md:mx-12 lg:mx-[200px] my-8 md:my-12 gap-4 md:gap-6"
+        class="flex flex-1 flex-col md:flex-row mx-4 md:mx-12 lg:mx-[200px] my-8 md:my-8 gap-4 md:gap-6"
       >
         <div
-          class="w-full h-40 md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6"
-        ></div>
+          class="w-full h-auto md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6 items-center flex flex-col"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="100"
+        >
+          <img
+            src="../assets/image/cloud_ok.png"
+            alt=""
+            class="w-24 h-24 md:w-32 md:h-32"
+          />
+          <h1 class="text-lg md:text-xl font-bold mt-2">Semua Jawaban Valid</h1>
+          <p class="mt-2 text-center">
+            Ini bukan ujian sekolah, kok. Apapun pilihanmu adalah benar selama
+            itu sesuai dengan apa yang kamu rasakan saat ini
+          </p>
+        </div>
         <div
-          class="w-full h-40 md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6"
-        ></div>
+          class="w-full h-auto md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6 items-center flex flex-col"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <img
+            src="../assets/image/cloud_hearts.png"
+            alt=""
+            class="w-24 h-24 md:w-32 md:h-32"
+          />
+          <h1 class="text-lg md:text-xl font-bold mt-2">Jawab Sesuai Hatimu</h1>
+          <p class="mt-2 text-center">
+            Hasil tes ini hanya untukmu. Jawablah apa adanya agar kamu bisa
+            mengenal dirimu yang sesungguhnya secara akurat
+          </p>
+        </div>
         <div
-          class="w-full h-40 md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6"
-        ></div>
+          class="w-full h-auto md:h-auto bg-white shadow-lg rounded-xl p-4 md:p-6 items-center flex flex-col"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+        >
+          <img
+            src="../assets/image/cloud_chill.png"
+            alt=""
+            class="w-24 h-24 md:w-32 md:h-32"
+          />
+          <h1 class="text-lg md:text-xl font-bold mt-2">Santai Saja</h1>
+          <p class="mt-2 text-center">
+            Tidak perlu buru-buru selesai. Nikmati proses menjawab setiap
+            pertanyaannya agar kamu lebih memahami perasaanmu sendiri
+          </p>
+        </div>
       </div>
     </section>
     <section id="test_mbti">
@@ -85,29 +132,29 @@
         </div>
 
         <div
-          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
         >
           <h1 class="text-white text-center">Pertanyaan 1</h1>
         </div>
 
         <div
-          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#693668] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#693668] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
         >
           <h1 class="text-white text-center">Pertanyaan 2</h1>
         </div>
 
         <div
-          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#a74482] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#a74482] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
         >
           <h1 class="text-white text-center">Pertanyaan 3</h1>
         </div>
         <div
-          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#f84aa7] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#f84aa7] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
         >
           <h1 class="text-white text-center">Pertanyaan 4</h1>
         </div>
         <div
-          class="card-stack w-[480px] h-[520px] md:w-[1200px] md:h-[550px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
         >
           <h1 class="text-white text-center">Pertanyaan 5</h1>
         </div>
@@ -115,6 +162,9 @@
     </section>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init({ once: true });
+      });
       gsap.registerPlugin(ScrollTrigger);
       const cards = gsap.utils.toArray(".card");
 
