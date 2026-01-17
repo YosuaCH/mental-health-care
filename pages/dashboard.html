@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,18 +27,19 @@
     <link rel="stylesheet" href="../assets/css/style.css" />
     <!-- Quote Generator JS -->
     <script src="../assets/js/quote_generator.js"></script>
+    <!-- User Profile JS -->
+    <script src="../assets/js/user_profile_dropdown.js" defer></script>
   </head>
 
   <body class="bg-[#f8f8f8] font-[Poppins]">
     <nav
       class="fixed top-6 left-1/2 -translate-x-1/2 bg-white/80 backdrop-blur-md shadow-xl rounded-full z-50 px-4 py-2 w-auto min-w-[420px] max-w-2xl border border-white/40 flex justify-between items-center gap-4"
     >
-      <img onclick="location.reload()" class="flex-shrink-0 -pl-2">
-        <img
-          src="../assets/image/logo_brand-removebg-preview.png"
-          class="w-10 h-10"
-        />
-      </img>
+      <img onclick="location.reload()" class="flex-shrink-0 -pl-2" />
+      <img
+        src="../assets/image/logo_brand-removebg-preview.png"
+        class="w-10 h-10"
+      />
 
       <div
         class="hidden sm:block text-sm font-medium text-slate-500 font-[Poppins]"
@@ -358,52 +359,6 @@
         initCloudBgSection();
         generateDailyQuote();
         initUserProfile();
-      });
-
-      function initUserProfile() {
-        const userData = {
-          name: "Username",
-          email: "username@example.com",
-        };
-
-        // update text dengan data
-        const name = document.getElementById("user-name");
-        if (name) name.innerText = userData.name;
-        const nameText = document.getElementById("user-name-text");
-        if (nameText) nameText.innerText = userData.name;
-        const dropdownName = document.getElementById("user-name-dropdown");
-        if (dropdownName) dropdownName.innerText = userData.name;
-
-        // gambar random
-        const avatarImg = document.getElementById("user-avatar");
-        if (avatarImg) {
-          avatarImg.src = `https://api.dicebear.com/9.x/avataaars/svg?seed=${Math.random()}`;
-        }
-      }
-
-      function toggleProfileMenu() {
-        const dropdown = document.getElementById("profile-dropdown");
-        const arrow = document.getElementById("profile-arrow");
-        if (dropdown) {
-          dropdown.classList.toggle("hidden");
-          if (arrow) {
-            arrow.classList.toggle("-rotate-180");
-          }
-        }
-      }
-
-      // buat tutup menu kalau klik di luar area
-      document.addEventListener("click", function (event) {
-        const dropdown = document.getElementById("profile-dropdown");
-        const button = event.target.closest("button");
-        const arrow = document.getElementById("profile-arrow");
-
-        if (dropdown && !dropdown.classList.contains("hidden") && !button) {
-          dropdown.classList.add("hidden");
-          if (arrow) {
-            arrow.classList.remove("rotate-180");
-          }
-        }
       });
     </script>
   </body>
