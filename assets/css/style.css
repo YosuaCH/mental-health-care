@@ -121,3 +121,25 @@ html::-webkit-scrollbar {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Radio Btn */
+.choice-circle-not-chosen {
+  background-color: rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+
+.choice-circle-chosen {
+  transform: translate3d(0px, 0px, 0px) scale3d(0, 0, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.answer.selected .choice-circle-chosen {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+}
+
+.answer.selected .choice-circle-not-chosen {
+  opacity: 0;
+}
