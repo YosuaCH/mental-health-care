@@ -27,6 +27,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Cards Container JS -->
+    <script src="../assets/js/cards_container.js" defer></script>
   </head>
 
   <body class="overflow-x-hidden bg-[#f8f8f8] font-[Poppins]">
@@ -133,219 +135,13 @@
           </p>
         </div>
 
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1
-            class="text-white text-center text-lg md:text-2xl font-semibold mb-2"
-          >
-            Pertanyaan 1
-          </h1>
-          <h2
-            class="text-white text-lg md:text-2xl font-semibold mb-2 text-center"
-          >
-            Habis minggu yang super capek, cara terbaik buat nge-charge
-            energimu?
-          </h2>
-
-          <div class="flex flex-1 gap-12 items-center justify-center">
-            <div
-              data-a="1"
-              data-q="1"
-              class="answer answer11 flex flex-col items-center gap-3 cursor-pointer group"
-              onclick="selectAnswer(this)"
-            >
-              <img
-                src="../assets/image/party_cloud.png"
-                alt="Party dengan teman"
-                class="w-[400px] h-[200px] object-cover rounded-2xl"
-              />
-
-              <div
-                class="grid grid-cols-1 place-items-center text-center w-full px-12"
-              >
-                <div
-                  class="col-start-1 row-start-1 choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300"
-                >
-                  Keluar nongkrong bareng teman-teman, cari suasana ramai!
-                </div>
-
-                <div
-                  class="col-start-1 row-start-1 choice-circle-chosen question-choice-circle is--chosen is--1a px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1"
-                >
-                  Keluar nongkrong bareng teman-teman, cari suasana ramai!
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="w-px h-52 bg-gradient-to-b from-transparent via-gray-500 to-transparent"
-            ></div>
-
-            <div
-              data-a="2"
-              data-q="1"
-              class="answer answer12 flex flex-col items-center gap-3 cursor-pointer group"
-              onclick="selectAnswer(this)"
-            >
-              <img
-                src="../assets/image/lonely_cloud.png"
-                alt="Sendiri di alam"
-                class="w-[400px] h-[200px] object-cover rounded-2xl"
-              />
-
-              <div
-                class="grid grid-cols-1 place-items-center text-center w-full px-12"
-              >
-                <div
-                  class="col-start-1 row-start-1 choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300"
-                >
-                  Selimutan di kasur, nonton film, atau baca buku sendirian.
-                </div>
-
-                <div
-                  class="col-start-1 row-start-1 choice-circle-chosen question-choice-circle is--chosen is--1b px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1"
-                >
-                  Selimutan di kasur, nonton film, atau baca buku sendirian.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#693668] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 2</h1>
-        </div>
-
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#a74482] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 3</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#f84aa7] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 4</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 5</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 6</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 7</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 8</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 9</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 10</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 11</h1>
-        </div>
-        <div
-          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#ff3562] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
-        >
-          <h1 class="text-white text-center">Pertanyaan 12</h1>
-        </div>
+        <div id="cards-container"></div>
       </div>
     </section>
-    <script>
-      function selectAnswer(element) {
-        // buat ambil semua answer dalam question yang sama
-        const question = element.getAttribute("data-q");
-        const allAnswers = document.querySelectorAll(`[data-q="${question}"]`);
-        allAnswers.forEach((answer) => {
-          answer.classList.remove("selected");
-        });
-        element.classList.add("selected");
 
-        // buat print log
-        const answerValue = element.getAttribute("data-a");
-        console.log(`Question ${question}, Answer ${answerValue} selected`);
-      }
-    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         AOS.init({ once: true });
-      });
-      gsap.registerPlugin(ScrollTrigger);
-      const cards = gsap.utils.toArray(".card");
-
-      const scrollDistance = (cards.length - 1) * window.innerHeight;
-
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#stack-container",
-          start: "top top",
-          end: "+=" + scrollDistance,
-          scrub: 1,
-          pin: true,
-        },
-      });
-
-      cards.forEach((card, index) => {
-        if (index > 0) {
-          gsap.set(card, {
-            y: window.innerHeight,
-            scale: 1,
-            filter: "brightness(1)",
-            opacity: 1,
-          });
-        } else {
-          gsap.set(card, {
-            y: 0,
-            scale: 1,
-            filter: "brightness(1)",
-            opacity: 1,
-          });
-        }
-      });
-
-      // Logic Animasi
-      cards.forEach((card, index) => {
-        // Geser atas
-        if (index < cards.length - 1) {
-          tl.to(cards[index + 1], {
-            y: 0,
-            scale: 1,
-            filter: "brightness(1)",
-            duration: 1,
-            ease: "none",
-          });
-          // kecilkan kartu sebelumnya
-          tl.to(
-            card,
-            {
-              scale: 0.9,
-              filter: "brightness(0.8)",
-              duration: 1,
-              ease: "none",
-            },
-            "<",
-          );
-        }
       });
     </script>
   </body>

@@ -1,0 +1,299 @@
+const questions = [
+  {
+    id: 1,
+    question:
+      "Habis minggu yang super capek, cara terbaik buat nge-charge energimu?",
+    color: "#1B1B3A",
+    answers: [
+      {
+        id: 1,
+        text: "Keluar nongkrong bareng teman-teman, cari suasana ramai!",
+        image: "../assets/image/party_cloud.png",
+        alt: "Party dengan teman",
+        dimension: "E",
+      },
+      {
+        id: 2,
+        text: "Selimutan di kasur, nonton film, atau baca buku sendirian.",
+        image: "../assets/image/lonely_cloud.png",
+        alt: "Sendiri di alam",
+        dimension: "I",
+      },
+    ],
+  },
+  {
+    id: 2,
+    question: "Di acara kumpul keluarga atau pesta, biasanya kamu...",
+    color: "#693668",
+    answers: [
+      {
+        id: 1,
+        text: "Keliling ngajak ngobrol banyak orang, bahkan yang baru kenal.",
+        image: "../assets/image/social_cloud.png",
+        alt: "Data dan fakta",
+        dimension: "S",
+      },
+      {
+        id: 2,
+        text: "Tricky nih, lebih suka nempel sama satu orang yang udah dikenal aja.",
+        image: "../assets/image/shy_cloud.png",
+        alt: "Ide dan konsep",
+        dimension: "N",
+      },
+    ],
+  },
+  {
+    id: 3,
+    question: "Kalau ada masalah, kamu tipe yang...",
+    color: "#A74482",
+    answers: [
+      {
+        id: 1,
+        text: "Langsung cerita ke orang lain biar lega.",
+        image: "../assets/image/storytelling_cloud.png",
+        alt: "Logika",
+        dimension: "T",
+      },
+      {
+        id: 2,
+        text: "Memendam dan memikirkannya sendiri dulu.",
+        image: "../assets/image/gloomy_cloud.png",
+        alt: "Perasaan",
+        dimension: "F",
+      },
+    ],
+  },
+  {
+    id: 4,
+    question: "Kamu lebih suka orang yang kalau ngomong itu...",
+    color: "#f84aa7",
+    answers: [
+      {
+        id: 1,
+        text: "To the point, jelas datanya, dan realistis.",
+        image: "../assets/image/analysis_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Penuh ide unik, filosofis, dan membicarakan masa depan.",
+        image: "../assets/image/imagination_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 5,
+    question:
+      "Kalau lagi melihat lukisan atau pemandangan, apa yang kamu perhatikan?",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Detail warnanya, bentuk objeknya, hal-hal yang nyata terlihat.",
+        image: "../assets/image/detail_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Makna di balik gambarnya atau perasaan apa yang muncul.",
+        image: "../assets/image/flex_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+];
+
+const answers = {};
+
+function generateCards() {
+  const container = document.getElementById("cards-container");
+
+  const totalQuestionsEl = document.querySelector(".total-questions-text");
+  if (totalQuestionsEl) {
+    totalQuestionsEl.textContent = questions.length;
+  }
+
+  questions.forEach((q) => {
+    const card = document.createElement("div");
+    card.className = `card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] rounded-2xl p-8 shadow-lg flex flex-col justify-start card`;
+    card.style.backgroundColor = q.color;
+
+    card.innerHTML = `
+      <h1 class="text-white text-center text-lg md:text-2xl font-semibold mb-2">
+        Pertanyaan ${q.id}
+      </h1>
+      
+      <div class="h-[80px] flex items-center justify-center mb-2 px-4">
+        <h2 class="text-white text-lg md:text-2xl font-semibold text-center leading-tight">
+          ${q.question}
+        </h2>
+      </div>
+
+      <div class="flex flex-1 w-full gap-4 md:gap-12 items-start justify-center">
+        ${q.answers
+          .map(
+            (answer, answerIndex) => `
+          <div
+            data-a="${answer.id}"
+            data-q="${q.id}"
+            data-dimension="${answer.dimension}"
+            class="answer answer${q.id}${answer.id} flex-1 min-w-0 flex flex-col items-center gap-3 cursor-pointer group"
+          >
+            <img
+              src="${answer.image}"
+              alt="${answer.alt}"
+              class="w-full max-w-[400px] h-[200px] object-cover rounded-2xl"
+            />
+
+            <div class="grid grid-cols-1 place-items-center text-center w-full px-4 md:px-12 h-[100px]">
+              
+              <div class="col-start-1 row-start-1 w-full flex items-center justify-center">
+                 <div class="choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300 inline-block">
+                    ${answer.text}
+                 </div>
+              </div>
+
+              <div class="col-start-1 row-start-1 w-full flex items-center justify-center">
+                 <div class="choice-circle-chosen question-choice-circle is--chosen is--${q.id}${String.fromCharCode(96 + answer.id)} px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1 inline-block">
+                    ${answer.text}
+                 </div>
+              </div>
+
+            </div>
+          </div>
+          ${
+            answerIndex === 0
+              ? '<div class="w-px h-52 bg-gradient-to-b from-transparent via-gray-500 to-transparent shrink-0"></div>'
+              : ""
+          }
+        `,
+          )
+          .join("")}
+      </div>
+    `;
+
+    container.appendChild(card);
+  });
+
+  document.querySelectorAll(".answer").forEach((answer) => {
+    answer.addEventListener("click", function () {
+      selectAnswer(this);
+    });
+  });
+}
+
+function selectAnswer(element) {
+  const question = element.getAttribute("data-q");
+  const answerValue = element.getAttribute("data-a");
+  const dimension = element.getAttribute("data-dimension");
+  const allAnswers = document.querySelectorAll(`[data-q="${question}"]`);
+  allAnswers.forEach((answer) => {
+    answer.classList.remove("selected");
+  });
+
+  element.classList.add("selected");
+
+  answers[question] = {
+    answer: answerValue,
+    dimension: dimension,
+  };
+
+  console.log(
+    `Question ${question}, Answer ${answerValue} (${dimension}) selected`,
+  );
+  console.log("Current answers:", answers);
+}
+
+// GSAP Animate
+function initAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+  const cards = gsap.utils.toArray(".card");
+
+  if (cards.length === 0) {
+    console.error("No cards found!");
+    return;
+  }
+
+  const scrollDistance = (cards.length - 1) * window.innerHeight;
+
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: "#stack-container",
+      start: "top top",
+      end: "+=" + scrollDistance,
+      scrub: 1,
+      pin: true,
+    },
+  });
+
+  cards.forEach((card, index) => {
+    if (index > 0) {
+      gsap.set(card, {
+        y: window.innerHeight,
+        scale: 1,
+        filter: "brightness(1)",
+        opacity: 1,
+      });
+    } else {
+      gsap.set(card, {
+        y: 0,
+        scale: 1,
+        filter: "brightness(1)",
+        opacity: 1,
+      });
+    }
+  });
+
+  cards.forEach((card, index) => {
+    if (index < cards.length - 1) {
+      tl.to(cards[index + 1], {
+        y: 0,
+        scale: 1,
+        filter: "brightness(1)",
+        duration: 1,
+        ease: "none",
+      });
+      tl.to(
+        card,
+        {
+          scale: 0.9,
+          filter: "brightness(0.8)",
+          duration: 1,
+          ease: "none",
+        },
+        "<",
+      );
+    }
+  });
+}
+
+//Calculate Results
+function calculateMBTI() {
+  const scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
+
+  Object.values(answers).forEach((answer) => {
+    scores[answer.dimension]++;
+  });
+
+  const result =
+    (scores.E > scores.I ? "E" : "I") +
+    (scores.S > scores.N ? "S" : "N") +
+    (scores.T > scores.F ? "T" : "F") +
+    (scores.J > scores.P ? "J" : "P");
+
+  return { result, scores };
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM loaded, initializing cards...");
+  generateCards();
+
+  setTimeout(() => {
+    initAnimation();
+  }, 100);
+});
