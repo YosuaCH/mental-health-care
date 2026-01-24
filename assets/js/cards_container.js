@@ -71,7 +71,7 @@ const questions = [
       {
         id: 1,
         text: "To the point, jelas datanya, dan realistis.",
-        image: "../assets/image/analysis_cloud.png",
+        image: "../assets/image/fact_cloud.png",
         alt: "Terencana",
         dimension: "J",
       },
@@ -100,7 +100,154 @@ const questions = [
       {
         id: 2,
         text: "Makna di balik gambarnya atau perasaan apa yang muncul.",
+        image: "../assets/image/cloud_meaning.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 6,
+    question: "Kamu lebih percaya pada...",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Pengalaman masa lalu yang sudah terbukti.",
+        image: "../assets/image/history_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Firasat dan kemungkinan di masa depan.",
+        image: "../assets/image/insting_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 7,
+    question: "Temanmu curhat soal kesalahannya yang fatal. Respon pertamamu?",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Menganalisa kenapa itu terjadi dan kasih solusi logis biar gak ulang lagi.",
+        image: "../assets/image/analysis_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Kasih dukungan emosional dulu, validasi perasaannya, biar dia tenang.",
+        image: "../assets/image/emotional_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 8,
+    question: "Menurutmu, pujian itu lebih berharga kalau ditujukan untuk...",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Kecerdasan dan kompetensimu dalam menyelesaikan tugas.",
+        image: "../assets/image/proud_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Kebaikan hati dan kepedulianmu terhadap orang lain.",
+        image: "../assets/image/kind_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 9,
+    question: "Dalam perdebatan, yang paling penting buat kamu adalah...",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Kebenaran dan fakta, walaupun itu menyakitkan.",
+        image: "../assets/image/justice_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Menjaga perasaan orang lain agar tidak tersinggung.",
+        image: "../assets/image/feeling_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 10,
+    question: "Besok mau liburan! Gaya packing kamu gimana?",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Bikin list barang dulu, packing jauh-jauh hari biar rapi.",
+        image: "../assets/image/structure_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: " Masukin barang-barang pas menit terakhir, yang penting kebawa!",
+        image: "../assets/image/justBring_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 11,
+    question: "Kamu lebih suka suasana kerja/belajar yang...",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Terstruktur, ada deadline jelas, dan langkah-langkah pasti.",
+        image: "../assets/image/structure_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Fleksibel, bebas berekspresi, dan bisa berubah sewaktu-waktu.",
         image: "../assets/image/flex_cloud.png",
+        alt: "Spontan",
+        dimension: "P",
+      },
+    ],
+  },
+  {
+    id: 12,
+    question: "Kalau ada janji temu jam 7 malam, kamu biasanya...",
+    color: "#ff3562",
+    answers: [
+      {
+        id: 1,
+        text: "Datang jam 6.45. Pantang telat!",
+        image: "../assets/image/onTime_cloud.png",
+        alt: "Terencana",
+        dimension: "J",
+      },
+      {
+        id: 2,
+        text: "Jam 7 baru jalan, atau ya... telat dikit gapapa lah ya.",
+        image: "../assets/image/delayed_cloud.png",
         alt: "Spontan",
         dimension: "P",
       },
