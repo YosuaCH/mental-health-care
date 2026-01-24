@@ -134,7 +134,7 @@
         </div>
 
         <div
-          class="card-stack w-[450px] h-[480px] md:w-[1100px] md:h-[490px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
+          class="card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] bg-[#1B1B3A] rounded-2xl p-8 shadow-lg flex flex-col justify-start card"
         >
           <h1
             class="text-white text-center text-lg md:text-2xl font-semibold mb-2"
@@ -152,7 +152,7 @@
             <div
               data-a="1"
               data-q="1"
-              class="answer answer11 flex flex-col items-center gap-3 cursor-pointer"
+              class="answer answer11 flex flex-col items-center gap-3 cursor-pointer group"
               onclick="selectAnswer(this)"
             >
               <img
@@ -161,17 +161,19 @@
                 class="w-[400px] h-[200px] object-cover rounded-2xl"
               />
 
-              <div class="relative flex items-center justify-center w-full">
+              <div
+                class="grid grid-cols-1 place-items-center text-center w-full px-12"
+              >
                 <div
-                  class="choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all"
+                  class="col-start-1 row-start-1 choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300"
                 >
-                  Party dengan teman
+                  Keluar nongkrong bareng teman-teman, cari suasana ramai!
                 </div>
 
                 <div
-                  class="choice-circle-chosen question-choice-circle is--chosen is--1a absolute px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium flex items-center justify-center opacity-1 transition-all"
+                  class="col-start-1 row-start-1 choice-circle-chosen question-choice-circle is--chosen is--1a px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1"
                 >
-                  Party dengan teman
+                  Keluar nongkrong bareng teman-teman, cari suasana ramai!
                 </div>
               </div>
             </div>
@@ -183,7 +185,7 @@
             <div
               data-a="2"
               data-q="1"
-              class="answer answer12 flex flex-col items-center gap-3 cursor-pointer"
+              class="answer answer12 flex flex-col items-center gap-3 cursor-pointer group"
               onclick="selectAnswer(this)"
             >
               <img
@@ -192,17 +194,19 @@
                 class="w-[400px] h-[200px] object-cover rounded-2xl"
               />
 
-              <div class="relative flex items-center justify-center w-full">
+              <div
+                class="grid grid-cols-1 place-items-center text-center w-full px-12"
+              >
                 <div
-                  class="choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all"
+                  class="col-start-1 row-start-1 choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300"
                 >
-                  Sendiri di alam
+                  Selimutan di kasur, nonton film, atau baca buku sendirian.
                 </div>
 
                 <div
-                  class="choice-circle-chosen question-choice-circle is--chosen is--1b absolute px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-white text-sm md:text-base font-medium flex items-center justify-center opacity-1 transition-all"
+                  class="col-start-1 row-start-1 choice-circle-chosen question-choice-circle is--chosen is--1b px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1"
                 >
-                  Sendiri di alam
+                  Selimutan di kasur, nonton film, atau baca buku sendirian.
                 </div>
               </div>
             </div>
