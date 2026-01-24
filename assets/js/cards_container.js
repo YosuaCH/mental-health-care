@@ -198,7 +198,7 @@ const questions = [
       {
         id: 1,
         text: "Bikin list barang dulu, packing jauh-jauh hari biar rapi.",
-        image: "../assets/image/structure_cloud.png",
+        image: "../assets/image/listing_cloud.png",
         alt: "Terencana",
         dimension: "J",
       },
