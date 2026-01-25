@@ -268,7 +268,7 @@ function generateCards() {
   questions.forEach((q) => {
     const card = document.createElement("div");
     card.className = `card-stack w-[450px] h-[480px] md:w-[1200px] md:h-[490px] rounded-2xl p-8 shadow-lg flex flex-col justify-start card`;
-    card.style.backgroundColor = q.color;
+    card.style.backgroundColor = "#1B1B3A";
 
     card.innerHTML = `
       <h1 class="text-white text-center text-lg md:text-2xl font-semibold mb-2">
