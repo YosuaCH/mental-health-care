@@ -3,7 +3,6 @@ const questions = [
     id: 1,
     question:
       "Habis minggu yang super capek, cara terbaik buat nge-charge energimu?",
-    color: "#1B1B3A",
     answers: [
       {
         id: 1,
@@ -24,63 +23,61 @@ const questions = [
   {
     id: 2,
     question: "Di acara kumpul keluarga atau pesta, biasanya kamu...",
-    color: "#693668",
     answers: [
       {
         id: 1,
         text: "Keliling ngajak ngobrol banyak orang, bahkan yang baru kenal.",
         image: "../assets/image/social_cloud.png",
         alt: "Data dan fakta",
-        dimension: "S",
+        dimension: "E",
       },
       {
         id: 2,
         text: "Tricky nih, lebih suka nempel sama satu orang yang udah dikenal aja.",
         image: "../assets/image/shy_cloud.png",
         alt: "Ide dan konsep",
-        dimension: "N",
+        dimension: "I",
       },
     ],
   },
   {
     id: 3,
     question: "Kalau ada masalah, kamu tipe yang...",
-    color: "#A74482",
     answers: [
       {
         id: 1,
         text: "Langsung cerita ke orang lain biar lega.",
         image: "../assets/image/storytelling_cloud.png",
         alt: "Logika",
-        dimension: "T",
+        dimension: "E",
       },
       {
         id: 2,
         text: "Memendam dan memikirkannya sendiri dulu.",
         image: "../assets/image/gloomy_cloud.png",
         alt: "Perasaan",
-        dimension: "F",
+        dimension: "I",
       },
     ],
   },
+
   {
     id: 4,
     question: "Kamu lebih suka orang yang kalau ngomong itu...",
-    color: "#f84aa7",
     answers: [
       {
         id: 1,
         text: "To the point, jelas datanya, dan realistis.",
         image: "../assets/image/fact_cloud.png",
         alt: "Terencana",
-        dimension: "J",
+        dimension: "S",
       },
       {
         id: 2,
         text: "Penuh ide unik, filosofis, dan membicarakan masa depan.",
         image: "../assets/image/imagination_cloud.png",
         alt: "Spontan",
-        dimension: "P",
+        dimension: "N",
       },
     ],
   },
@@ -88,112 +85,108 @@ const questions = [
     id: 5,
     question:
       "Kalau lagi melihat lukisan atau pemandangan, apa yang kamu perhatikan?",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
         text: "Detail warnanya, bentuk objeknya, hal-hal yang nyata terlihat.",
         image: "../assets/image/detail_cloud.png",
         alt: "Terencana",
-        dimension: "J",
+        dimension: "S",
       },
       {
         id: 2,
         text: "Makna di balik gambarnya atau perasaan apa yang muncul.",
         image: "../assets/image/cloud_meaning.png",
         alt: "Spontan",
-        dimension: "P",
+        dimension: "N",
       },
     ],
   },
   {
     id: 6,
     question: "Kamu lebih percaya pada...",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
         text: "Pengalaman masa lalu yang sudah terbukti.",
         image: "../assets/image/history_cloud.png",
         alt: "Terencana",
-        dimension: "J",
+        dimension: "S",
       },
       {
         id: 2,
         text: "Firasat dan kemungkinan di masa depan.",
         image: "../assets/image/insting_cloud.png",
         alt: "Spontan",
-        dimension: "P",
+        dimension: "N",
       },
     ],
   },
+
   {
     id: 7,
     question: "Temanmu curhat soal kesalahannya yang fatal. Respon pertamamu?",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
         text: "Menganalisa kenapa itu terjadi dan kasih solusi logis biar gak ulang lagi.",
         image: "../assets/image/analysis_cloud.png",
         alt: "Terencana",
-        dimension: "J",
+        dimension: "T",
       },
       {
         id: 2,
         text: "Kasih dukungan emosional dulu, validasi perasaannya, biar dia tenang.",
         image: "../assets/image/emotional_cloud.png",
         alt: "Spontan",
-        dimension: "P",
+        dimension: "F",
       },
     ],
   },
   {
     id: 8,
     question: "Menurutmu, pujian itu lebih berharga kalau ditujukan untuk...",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
         text: "Kecerdasan dan kompetensimu dalam menyelesaikan tugas.",
         image: "../assets/image/proud_cloud.png",
         alt: "Terencana",
-        dimension: "J",
+        dimension: "T",
       },
       {
         id: 2,
         text: "Kebaikan hati dan kepedulianmu terhadap orang lain.",
         image: "../assets/image/kind_cloud.png",
         alt: "Spontan",
-        dimension: "P",
+        dimension: "F",
       },
     ],
   },
   {
     id: 9,
     question: "Dalam perdebatan, yang paling penting buat kamu adalah...",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
         text: "Kebenaran dan fakta, walaupun itu menyakitkan.",
         image: "../assets/image/justice_cloud.png",
         alt: "Terencana",
-        dimension: "J",
+        dimension: "T",
       },
       {
         id: 2,
         text: "Menjaga perasaan orang lain agar tidak tersinggung.",
         image: "../assets/image/feeling_cloud.png",
         alt: "Spontan",
-        dimension: "P",
+        dimension: "F",
       },
     ],
   },
+
   {
     id: 10,
     question: "Besok mau liburan! Gaya packing kamu gimana?",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
@@ -214,7 +207,6 @@ const questions = [
   {
     id: 11,
     question: "Kamu lebih suka suasana kerja/belajar yang...",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
@@ -235,7 +227,6 @@ const questions = [
   {
     id: 12,
     question: "Kalau ada janji temu jam 7 malam, kamu biasanya...",
-    color: "#ff3562",
     answers: [
       {
         id: 1,
@@ -436,6 +427,23 @@ function calculateMBTI() {
   return { result, scores };
 }
 
+function finishTest(event) {
+  event.preventDefault();
+
+  if (Object.keys(answers).length < questions.length) {
+    alert("Waduh, belum selesai! Jawab semua pertanyaan dulu ya 😊");
+    return;
+  }
+
+  const hasil = calculateMBTI();
+
+  console.log("Hasil MBTI:", hasil.result);
+
+  localStorage.setItem("mbti_result", hasil.result);
+  localStorage.setItem("mbti_scores", JSON.stringify(hasil.scores));
+
+  window.location.href = "result_mbti.html";
+}
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM loaded, initializing cards...");
   generateCards();
