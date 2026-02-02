@@ -283,9 +283,9 @@ function generateCards() {
             class="answer answer${q.id}${answer.id} flex-1 min-w-0 flex flex-col items-center gap-3 cursor-pointer group"
           >
             <img
-              src="${answer.image}"
+              data-src="${answer.image}"
               alt="${answer.alt}"
-              class="lazy-load w-full max-w-[400px] h-[200px] object-cover rounded-2xl"
+              class="lazy-load w-full max-w-[400px] h-[200px] object-cover rounded-2xl bg-gray-200"
             />
 
             <div class="grid grid-cols-1 place-items-center text-center w-full px-4 md:px-12 h-[100px]">
@@ -317,6 +317,10 @@ function generateCards() {
 
     container.appendChild(card);
   });
+
+  setTimeout(() => {
+    initLazyLoading();
+  }, 50);
 
   document.querySelectorAll(".answer").forEach((answer) => {
     answer.addEventListener("click", function () {
@@ -431,16 +435,22 @@ function initLazyLoading() {
   const lazyImages = document.querySelectorAll("img.lazy-load");
 
   if ("IntersectionObserver" in window) {
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const img = entry.target;
-          img.src = img.dataset.src;
-          img.classList.remove("lazy-load");
-          imageObserver.unobserve(img);
-        }
-      });
-    });
+    const imageObserver = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target;
+            console.log("📷 Loading image:", img.dataset.src);
+            img.src = img.dataset.src;
+            img.classList.remove("lazy-load");
+            imageObserver.unobserve(img);
+          }
+        });
+      },
+      {
+        rootMargin: "50px",
+      },
+    );
 
     lazyImages.forEach((img) => imageObserver.observe(img));
   } else {
