@@ -282,25 +282,33 @@ function generateCards() {
             data-dimension="${answer.dimension}"
             class="answer answer${q.id}${answer.id} flex-1 min-w-0 flex flex-col items-center gap-3 cursor-pointer group"
           >
-            <img
-              data-src="${answer.image}"
-              alt="${answer.alt}"
-              class="lazy-load w-full max-w-[400px] h-[200px] object-cover rounded-2xl bg-gray-300"
-              style="filter: blur(10px);"
-            />
+            <div class="relative w-full max-w-[400px] h-[200px] rounded-2xl overflow-hidden">
+              <img
+                src="${answer.image}"
+                alt=""
+                class="absolute inset-0 w-full h-full object-cover"
+                style="filter: blur(20px); transform: scale(1.1);"
+              />
+              
+              <img
+                data-src="${answer.image}"
+                alt="${answer.alt}"
+                class="lazy-load absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-0"
+              />
+            </div>
 
             <div class="grid grid-cols-1 place-items-center text-center w-full px-4 md:px-12 h-[100px]">
               
               <div class="col-start-1 row-start-1 w-full flex items-center justify-center">
-                 <div class="choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300 inline-block">
+                <div class="choice-circle-not-chosen question-choice-circle is--not-chosen px-6 py-2 rounded-full border border-white text-white text-sm md:text-base font-medium transition-all duration-300 inline-block">
                     ${answer.text}
-                 </div>
+                </div>
               </div>
 
               <div class="col-start-1 row-start-1 w-full flex items-center justify-center">
-                 <div class="choice-circle-chosen question-choice-circle is--chosen is--${q.id}${String.fromCharCode(96 + answer.id)} px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1 inline-block">
+                <div class="choice-circle-chosen question-choice-circle is--chosen is--${q.id}${String.fromCharCode(96 + answer.id)} px-6 py-2 rounded-full bg-yellow-500 border border-yellow-500 text-[#1B1B3A] text-sm md:text-base font-medium transition-all duration-300 opacity-1 inline-block">
                     ${answer.text}
-                 </div>
+                </div>
               </div>
 
             </div>
@@ -348,7 +356,7 @@ function initLazyLoading() {
 
             fullImg.onload = () => {
               img.src = img.dataset.src;
-              img.style.filter = "blur(0px)";
+              img.style.opacity = "1";
               img.classList.remove("lazy-load");
             };
 
@@ -358,7 +366,7 @@ function initLazyLoading() {
       },
       {
         root: null,
-        rootMargin: "50px",
+        rootMargin: "100px",
         threshold: 0.01,
       },
     );
@@ -369,7 +377,7 @@ function initLazyLoading() {
   } else {
     lazyImages.forEach((img) => {
       img.src = img.dataset.src;
-      img.style.filter = "blur(0px)";
+      img.style.opacity = "1";
     });
   }
 }
