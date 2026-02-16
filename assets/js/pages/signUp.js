@@ -1,19 +1,20 @@
 import { registerClient } from "../services/authService.js";
+import { setupPasswordValidator } from "../animations/password_validator.js";
 
 const registerForm = document.getElementById("registerForm");
+const passwordInput = document.getElementById("password");
+const confirmInput = document.getElementById("confirmPassword");
+
+const isPasswordValid = setupPasswordValidator(passwordInput, confirmInput);
 
 registerForm.addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  if (!isPasswordValid()) return;
+
   const email = document.getElementById("email").value;
   const username = document.getElementById("username").value;
-  const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
-
-  if (password !== confirmPassword) {
-    alert("Password tidak sama!");
-    return;
-  }
+  const password = passwordInput.value;
 
   try {
     const res = await registerClient({ email, username, password });
