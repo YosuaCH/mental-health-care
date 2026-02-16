@@ -17,6 +17,8 @@
       type="image/png"
       href="../assets/image/logo_brand-removebg-preview.png"
     />
+    <!-- signUp JS -->
+    <script type="module" src="../assets/js/pages/signUp.js" defer></script>
   </head>
 
   <body
@@ -37,13 +39,14 @@
         </p>
       </div>
 
-      <form class="space-y-6" action="/login.html">
+      <form class="space-y-6" id="registerForm">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label class="block text-xs font-medium text-gray-700 mb-1 ml-1"
               >Email</label
             >
             <input
+              id="email"
               type="email"
               placeholder="Email"
               required
@@ -56,6 +59,7 @@
               >Username</label
             >
             <input
+              id="username"
               type="text"
               placeholder="Username"
               required
@@ -71,6 +75,7 @@
                 >Kata Sandi</label
               >
               <input
+                id="password"
                 type="password"
                 placeholder="Kata Sandi"
                 required
@@ -83,6 +88,7 @@
                 >Ulangi Kata Sandi</label
               >
               <input
+                id="confirmPassword"
                 type="password"
                 placeholder="Ketik Ulang Kata Sandi"
                 required

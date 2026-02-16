@@ -1,9 +1,25 @@
+const API_URL = "http://localhost:8080/auth";
+
 export const login = async (email, password) => {
-  const response = await fetch("http://localhost:8080/auth/login", {
+  return fetch(`${API_URL}/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ email, password }),
   });
+};
 
-  return response;
+export const registerClient = async (data) => {
+  return fetch(`${API_URL}/register/client`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
+};
+
+export const registerPsikiater = async (data) => {
+  return fetch(`${API_URL}/register/psikiater`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data),
+  });
 };
