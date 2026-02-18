@@ -53,12 +53,10 @@ export function setupPasswordValidator(passwordInput, confirmInput) {
     const allValid = Object.values(validations).every((v) => v === true);
 
     if (!allValid) {
-      alert("Password harus memenuhi semua ketentuan keamanan!");
       return false;
     }
 
     if (passwordInput.value !== confirmInput.value) {
-      alert("Kata sandi dan konfirmasi tidak sama!");
       return false;
     }
 
